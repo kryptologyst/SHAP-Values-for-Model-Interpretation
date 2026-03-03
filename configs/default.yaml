@@ -1,0 +1,53 @@
+"""Default configuration file."""
+
+data:
+  dataset_name: "iris"
+  test_size: 0.3
+  random_state: 42
+  feature_scaling: true
+  categorical_encoding: "onehot"
+  imputation_strategy: "median"
+  sensitive_attributes: []
+
+model:
+  model_type: "random_forest"
+  n_estimators: 100
+  max_depth: null
+  min_samples_split: 2
+  min_samples_leaf: 1
+  random_state: 42
+  device: "auto"
+
+shap:
+  explainer_type: "tree"
+  background_samples: 100
+  max_samples: 1000
+  feature_perturbation: "tree_path_dependent"
+  model_output: "raw"
+  link: "identity"
+
+evaluation:
+  faithfulness_tests: true
+  stability_tests: true
+  fidelity_tests: true
+  n_bootstrap_samples: 100
+  deletion_percentages: [0.1, 0.2, 0.5]
+  insertion_percentages: [0.1, 0.2, 0.5]
+
+visualization:
+  save_plots: true
+  plot_format: "png"
+  dpi: 300
+  style: "seaborn-v0_8"
+  color_palette: "viridis"
+  figure_size: [10, 6]
+
+# Paths
+data_dir: "data"
+assets_dir: "assets"
+logs_dir: "logs"
+checkpoints_dir: "checkpoints"
+
+# Logging
+log_level: "INFO"
+log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

@@ -1,0 +1,71 @@
+{
+  "model_accuracy": 0.8888888888888888,
+  "feature_importance": {
+    "sepal length (cm)": [
+      0.05767662204142866,
+      0.03693772515611368,
+      0.04623923578925598
+    ],
+    "sepal width (cm)": [
+      0.0076963702703334415,
+      0.009999846413921524,
+      0.005518370592657349
+    ],
+    "petal length (cm)": [
+      0.19607461778299956,
+      0.19410909075583377,
+      0.18128114309648646
+    ],
+    "petal width (cm)": [
+      0.1934848942823619,
+      0.20724135819957437,
+      0.20019610295251233
+    ]
+  },
+  "evaluation_metrics": {
+    "faithfulness_deletion": {
+      "deletion_scores": [
+        0.5555555555555556,
+        0.5555555555555556,
+        0.5555555555555556
+      ],
+      "deletion_percentages": [
+        0.1,
+        0.2,
+        0.5
+      ],
+      "original_accuracy": 0.8888888888888888
+    },
+    "faithfulness_insertion": {
+      "insertion_scores": [
+        0.35555555555555557,
+        0.35555555555555557,
+        0.35555555555555557
+      ],
+      "insertion_percentages": [
+        0.1,
+        0.2,
+        0.5
+      ],
+      "baseline_accuracy": 0.3333333333333333
+    },
+    "explanation_stats": {
+      "mean_abs_shap": 0.11137128144445659,
+      "std_abs_shap": 0.10141910233077908,
+      "max_abs_shap": 0.36140156156540443,
+      "min_abs_shap": 6.084274160396448e-05
+    }
+  },
+  "explanation_summary": {
+    "explainer_type": "tree",
+    "n_samples": 45,
+    "n_features": 4,
+    "feature_names": [
+      "sepal length (cm)",
+      "sepal width (cm)",
+      "petal length (cm)",
+      "petal width (cm)"
+    ],
+    "is_multiclass": false
+  }
+}
